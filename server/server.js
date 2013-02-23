@@ -7,12 +7,18 @@ try {
 
   server.listen(3001);
 
+  io.set('log level', 1);
+
   io.sockets.on('connection', function (socket) {
     
-    io.sockets.volatile.emit('message', { message: "Hello world 2 !!!"});
-    io.sockets.emit('message', { message: "Hello world 3 !!!"});
-    socket.broadcast.emit({ message: "Hello world 1 !!!"});
+    // socket.broadcast.emit({ message: "Hello world 1 !!!"});
+    socket.volatile.emit('message', { message: "Hello world 2 !!!"});
+    socket.emit('message', { message: "Hello world 3 !!!"});
     
+    socket.on('server', function (data) {
+      console.log(data.message);
+    });
+
   });
 
   // Handle ajax requests and server up and running page ...

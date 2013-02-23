@@ -11,7 +11,7 @@
   <body>
     <ul class="message"></ul>
     <script>
-
+    // Select node server depending on environment ...
     if(location.host.indexOf('localhost') !== -1) {
       var socket = io.connect('http://localhost:3001/');
     } else {
@@ -21,7 +21,7 @@
     var messageList = $('ul.message');
 
     socket.on('error', function(data) {
-     messageList.prepend("<li>Could not connect to server.<br />Please run the node server</li>");
+     messageList.prepend("<li>Could not connect to server.<br />Is the node server running ?</li>");
     });
 
     socket.on('connect', function() {
@@ -29,6 +29,7 @@
 
       socket.on('message', function (data) {
           messageList.prepend('<li>'+data.message+'</li>');
+          socket.emit('server', { message: 'Message '+data.message+' well received ...' });
       });
 
       socket.on('disconnect', function() {
