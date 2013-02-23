@@ -33,6 +33,7 @@ try {
 
 } catch (e) {
 
+  // Log exception ...
   console.log(e);
 
 }
