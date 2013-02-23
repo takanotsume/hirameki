@@ -7,6 +7,8 @@ try {
 
   server.listen(3001);
 
+  var pjson = require('../package.json');
+
   io.set('log level', 1);
 
   io.sockets.on('connection', function (socket) {
@@ -26,7 +28,7 @@ try {
     res.sendfile(__dirname + '/index.html');
   });
 
-  console.log('Node server started on http://localhost:3001');
+  console.log('Node server version '+pjson.version+' started on http://localhost:3001');
   console.log('Press Ctrl+C to stop');
 
 } catch (e) {
