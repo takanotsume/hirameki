@@ -1,0 +1,16 @@
+{
+  "name": "factory",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.x",
+    "socket.io": "0.9.x"
+  },
+  "subdomain": "hayabusa.factory",
+  "scripts": {
+    "start": "server/server.js"
+  },
+  "engines": {
+    "node": "0.8.x"
+  }
+}
