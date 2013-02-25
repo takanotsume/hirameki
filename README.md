@@ -9,6 +9,7 @@ Demo a full server/client app with:
 - Node Jitsu
 - gh-pages
 - Boilerplate HTML5, Bootstrap, Awesomefont
+- Integration test with Zombie JS http://zombie.labnotes.org/
 
 ## 1) Installing Github Repository and gh-pages post-commit
 ``` shell
