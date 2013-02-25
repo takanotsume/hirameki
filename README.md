@@ -5,7 +5,7 @@ Demo a full server/client app with:
 - NodejJS
   - Express 3.x
   - Socket.io
-  - Redis
+  - MongoDB, Redis
 - Node Jitsu
 - gh-pages
 - Boilerplate HTML5, Bootstrap, Awesomefont
@@ -51,6 +51,8 @@ Documentation
 ---
   - NodeJS http://nodejs.org/
   - NodeJitsu deploy your nodejs app on prd https://www.nodejitsu.com/
+  - Redis http://redis.io/download/
+  - Mongo DB http://www.mongodb.org/
   - [Tutorial](http://www.siteduzero.com/informatique/tutoriels/bootstrap-de-twitter-un-kit-css-et-plus) Bootstrap => http://twitter.github.com/bootstrap/
   - Create your HTML5 projects in 15 sec. http://www.initializr.com/ => http://html5boilerplate.com/
   - Fontawesome for twitter bootstrap http://fortawesome.github.com/Font-Awesome/
