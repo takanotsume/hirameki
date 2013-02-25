@@ -5,7 +5,9 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.min.css">
     <link rel="stylesheet" href="css/app.css">
+    <script src="js/lib/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
   <body>
     <!-- Use this installation button to install locally without going through the marketpace (see app.js) -->
@@ -14,10 +16,10 @@
     <p>
       Welcome to your awesome web app ...
     </p>
-    <!-- Using require.js, a module system for javascript, include the
-         js files. This loads "main.js", which in turn can load other
-         files, all handled by require.js:
-         http://requirejs.org/docs/api.html#jsfiles -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/lib/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <!-- http://requirejs.org/docs/api.html#jsfiles -->
     <script type="text/javascript"
             data-main="js/init.js"
             src="js/lib/require.js"></script>
