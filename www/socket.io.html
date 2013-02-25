@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.10/socket.io.min.js"></script>
+  </head>
+  <body>
+    <ul class="message"></ul>
+    <script>
+    // Select node server depending on environment ...
+    if(location.host.indexOf('localhost') !== -1) {
+      var socket = io.connect('http://localhost:3001/');
+    } else {
+      var socket = io.connect('http://hayabusa.factory.jit.su/');
+    }
+    
+    var messageList = $('ul.message');
+
+    socket.on('error', function(data) {
+     messageList.append("<li>Could not connect to server.<br />Is the node server running ?</li>");
+    });
+
+    socket.on('connect', function() {
+      messageList.append('<li>Connection established.</li>');
+
+      socket.on('message', function (data) {
+          messageList.append('<li>'+data.message+'</li>');
+          socket.emit('server', { message: 'Message '+data.message+' well received ...' });
+      });
+
+      socket.on('disconnect', function() {
+        messageList.append('<li>Connection lost</li>');
+      });
+    });
+
+    </script>
+  </body>
+</html>
