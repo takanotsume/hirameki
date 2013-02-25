@@ -54,3 +54,4 @@ Documentation
   - [Tutorial](http://www.siteduzero.com/informatique/tutoriels/bootstrap-de-twitter-un-kit-css-et-plus) Bootstrap => http://twitter.github.com/bootstrap/
   - Create your HTML5 projects in 15 sec. http://www.initializr.com/ => http://html5boilerplate.com/
   - Fontawesome for twitter bootstrap http://fortawesome.github.com/Font-Awesome/
+  - Self Signed SSL http://www.akadia.com/services/ssh_test_certificate.html
