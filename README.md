@@ -1,13 +1,29 @@
 Factory
 =======
 
-Testing full server/client app with nodejs Express 3.x and Socket.io server and gh-pages for static files delivery ...
+Demo a full server/client app with:
+- NodejJS
+  - Express 3.x
+  - Socket.io
+  - Redis
+- Node Jitsu
+- gh-pages
+- Boilerplate HTML5, Bootstrap, Awesomefont
 
-## Installation
+## 1) Installing Github Repository and gh-pages post-commit
 ``` shell
 git clone https://github.com/takanotsume/factory.git
 cd factory
 npm install
+cd factory/tools
+./add-post-commit.sh
+cd ..
+```
+
+### 2) Install/Deploy Node Jitsu
+``` shell
+[sudo] npm install jitsu -g
+jitsu deploy
 ```
 
 ## Run Server
@@ -22,13 +38,13 @@ node server.www.js
 
 Local Dev
 ---
-  - [Server](http://localhost:3001/)
-  - [Client](http://localhost:3000/socket.io.html)
+  - Server: http://localhost:3001/
+  - Client: http://localhost:3000/socket.io.html
   
 PRD
 ---
-  - [Server](http://hayabusa.factory.jit.su/)
-  - [Client](http://takanotsume.github.com/factory/www/socket.io.html)
+  - Server: http://hayabusa.factory.jit.su/
+  - Client: http://takanotsume.github.com/factory/www/socket.io.html
 
 Documentation
 ---
