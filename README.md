@@ -33,19 +33,19 @@ node server/server.js
 
 ## 4) Run local http server
 ``` shell
-node server.www.js
+node server-www.js
 ```
 
 ## 5) Testing Local/Production
 Local
 ---
   - Server: http://localhost:3001/
-  - Client: http://localhost:3000/socket.io.html
+  - Client: http://localhost:3000/
   
 Production
 ---
   - Server: http://hayabusa.factory.jit.su/
-  - Client: http://takanotsume.github.com/factory/www/socket.io.html
+  - Client: http://takanotsume.github.com/factory/www/
 
 Documentation
 ---
