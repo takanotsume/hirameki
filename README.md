@@ -20,28 +20,29 @@ cd factory/tools
 cd ..
 ```
 
-### 2) Install/Deploy Node Jitsu
+## 2) Install/Deploy Node Jitsu
 ``` shell
 [sudo] npm install jitsu -g
 jitsu deploy
 ```
 
-## Run Server
+## 3) Run Server
 ``` shell
 node server/server.js
 ```
 
-## Run local http server
+## 4) Run local http server
 ``` shell
 node server.www.js
 ```
 
-Local Dev
+## 5) Testing Local/Production
+Local
 ---
   - Server: http://localhost:3001/
   - Client: http://localhost:3000/socket.io.html
   
-PRD
+Production
 ---
   - Server: http://hayabusa.factory.jit.su/
   - Client: http://takanotsume.github.com/factory/www/socket.io.html
