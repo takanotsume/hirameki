@@ -13,9 +13,7 @@ try {
 
   io.sockets.on('connection', function (socket) {
     
-    // socket.broadcast.emit({ message: "Hello world 1 !!!"});
-    socket.volatile.emit('message', { message: "Hello world 2 !!!"});
-    socket.emit('message', { message: "Hello world 3 !!!"});
+    socket.volatile.emit('message', { message: "Hello world !!!"});
     
     socket.on('server', function (data) {
       console.log(data.message);
