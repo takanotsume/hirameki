@@ -9,7 +9,7 @@ Demo a full server/client app with:
 - Node Jitsu
 - gh-pages
 - Boilerplate HTML5, Bootstrap, Awesomefont
-- Integration test with Zombie JS http://zombie.labnotes.org/
+- Zombie.js, Assert.js, Handlebar/EJS, moment.js
 
 ## 1) Installing Github Repository and gh-pages post-commit
 ``` shell
@@ -58,3 +58,6 @@ Documentation
   - Create your HTML5 projects in 15 sec. http://www.initializr.com/ => http://html5boilerplate.com/
   - Fontawesome for twitter bootstrap http://fortawesome.github.com/Font-Awesome/
   - Self Signed SSL http://www.akadia.com/services/ssh_test_certificate.html
+  - Integration test with Zombie JS http://zombie.labnotes.org/
+  - http://embeddedjs.com/, http://momentjs.com/, http://nodejs.org/docs/v0.3.1/api/assert.html
+  - Have a look to https://github.com/iloire/WatchMen
