@@ -11,14 +11,20 @@ try {
 
   io.set('log level', 1);
 
-  io.sockets.on('connection', function (socket) {
-    
+  io.configure(function (){
+    io.set('authorization', function (handshakeData, callback) {
+      // console.log(handshakeData);
+      callback(null, true); // True of false auth success ...
+    });
+  });
+
+  io.sockets.on('connection', function (socket) {  
+    // Emit and forget ...
     socket.volatile.emit('message', { message: "Hello world !!!"});
-    
+    // Listen to server message sent from client ...
     socket.on('server', function (data) {
       console.log(data.message);
     });
-
   });
 
   // Handle ajax requests and server up and running page ...
