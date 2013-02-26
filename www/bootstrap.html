@@ -27,6 +27,11 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
+        <div class="alert fade in">
+            <button data-dismiss="alert" class="close" type="button">×</button>
+            <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
+        </div>
+
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
         <div class="navbar navbar-inverse navbar-fixed-top">
@@ -113,6 +118,7 @@
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
             */
+            $('.alert').show();
         </script>
 
     </body>
