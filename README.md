@@ -61,3 +61,4 @@ Documentation
   - Integration test with Zombie JS http://zombie.labnotes.org/
   - http://embeddedjs.com/, http://momentjs.com/, http://nodejs.org/docs/v0.3.1/api/assert.html, Jquery timeago
   - Have a look to https://github.com/iloire/WatchMen
+  - http://bartaz.github.com/impress.js/#/overview
