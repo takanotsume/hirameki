@@ -27,11 +27,6 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="alert fade in">
-            <button data-dismiss="alert" class="close" type="button">×</button>
-            <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
-        </div>
-
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
         <div class="navbar navbar-inverse navbar-fixed-top">
@@ -73,6 +68,8 @@
 
         <div class="container">
 
+            <div class="notice"></div>
+
             <!-- Main hero unit for a primary marketing message or call to action -->
             <div class="hero-unit">
                 <h1>Hello, world!</h1>
@@ -107,11 +104,31 @@
 
         </div> <!-- /container -->
 
+        <!-- /template -->
+        <script id="entry-template" type="text/x-handlebars-template">
+            <div class="alert fade in">
+                <button data-dismiss="alert" class="close" type="button">×</button>
+                <strong>{{{title}}}</strong> {{body}}
+            </div>
+        </script>
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/lib/jquery-1.9.1.min.js"><\/script>')</script>
         <script src="js/lib/bootstrap.min.js"></script>
+        <script src="js/lib/handlebars.js"></script>
         <script src="js/main.js"></script>
         <script>
+
+            $("a.btn-primary").click(function() {
+                var template = Handlebars.compile($("#entry-template").html());
+                var data = {title: "My New Notice", body: "This is my first Notice!"}
+                var html = template(data);
+                $('div.notice').append(html);
+                $('div.alert').fadeOut(2500, function() {
+                    // Animation complete.
+                });
+            });
+
             /*
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
