@@ -62,3 +62,4 @@ Documentation
   - http://embeddedjs.com/, http://momentjs.com/, http://nodejs.org/docs/v0.3.1/api/assert.html, Jquery timeago
   - Have a look to https://github.com/iloire/WatchMen
   - http://bartaz.github.com/impress.js/#/overview
+  - X-Tag https://github.com/mozilla/x-tag as in https://github.com/mozilla/mortar-tab-view/tree/master/www/js/lib
