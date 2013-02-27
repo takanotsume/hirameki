@@ -1,4 +1,4 @@
-[![Hirameki](https://raw.github.com/takanotsume/hirameki/master/www/img/lamp/lamp_32x32.png)] Hirameki
+(https://raw.github.com/takanotsume/hirameki/master/www/img/lamp/lamp_32x32.png) Hirameki
 =======
 
 Hirameki (閃き) means a flash of an idea ...
