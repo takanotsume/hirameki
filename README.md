@@ -1,4 +1,4 @@
-[![solarized dualmode](https://raw.github.com/takanotsume/hirameki/master/www/img/lamp/lamp_32x32.png)](#features)Hirameki
+Hirameki [![solarized dualmode](https://raw.github.com/takanotsume/hirameki/master/www/img/lamp/lamp_32x32.png)](#features)
 =======
 
 Hirameki (閃き) means a flash of an idea ...
@@ -69,3 +69,13 @@ Documentation
 Configure
 ---
   - Socket IO https://github.com/LearnBoost/Socket.IO/wiki/Configuring-Socket.IO
+
+Contributors
+------------
+
+Michael Simonini ([takanotsume](https://github.com/takanotsume/))
+
+Todo
+-----
+
+  * ...
