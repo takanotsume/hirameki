@@ -1,5 +1,7 @@
-Factory
+Hirameki
 =======
+
+Hirameki (閃き) means a flash of an idea ...
 
 Demo a full server/client app with:
 - NodejJS
