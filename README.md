@@ -66,6 +66,20 @@ Documentation
   - http://bartaz.github.com/impress.js/#/overview
   - X-Tag https://github.com/mozilla/x-tag as in https://github.com/mozilla/mortar-tab-view/tree/master/www/js/lib
 
+HTML 5
+---
+  - http://www.html5rocks.com/en/tutorials/appcache/beginner/
+  
+Mozilla
+---
+  - https://marketplace.firefox.com/developers/
+  - Mozilla web app https://developer.mozilla.org/en-US/docs/Apps/Getting_Started
+  - https://developer.mozilla.org/en-US/docs/HTML/HTML5
+  - https://developer.mozilla.org/en/docs/DOM/window.navigator
+  - https://hacks.mozilla.org/2013/02/getting-started-with-open-web-apps-why-and-how/
+    https://github.com/robnyman/Firefox-OS-Boilerplate-App
+  - https://developer.mozilla.org/en-US/docs/Apps
+
 Configure
 ---
   - Socket IO https://github.com/LearnBoost/Socket.IO/wiki/Configuring-Socket.IO
