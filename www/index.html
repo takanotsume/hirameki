@@ -34,6 +34,7 @@
                         <li>Bootstrap, Modernizer, Boilerplate, Font Awesome</li>
                         <li>Backbone.js</li>
                         <li>Impress.js</li>
+                        <li>Hammer.js</li>
                     </ul>
                 </p>
                 <br />
@@ -43,7 +44,7 @@
                     </ul>
                 </p>
                 <br />
-                <p>Examples:
+                <p>Explorations:
                     <ul>
                         <li><a href="bootstrap.html">Initializr (Bootstrap, Boilerplate, Modernizer, ...)</a><br />
                         Tuto: <a href="http://www.siteduzero.com/informatique/tutoriels/bootstrap-de-twitter-un-kit-css-et-plus">Bootstrap</a></li>
@@ -51,18 +52,45 @@
                         <li><a href="socket-io.html">Socket.io client</a></li>
                         <li><a href="font-awesome.html">Font Awesome</a></li>
                         <li><a href="html5.html">HTML 5 Features</a></li>
-                        <li><a href="impress.html">Impress</a></li>
+                        <li><a href="impress.html">Impress ( Demo Slides)</a></li>
+                        <li><a href="hammer.html">Hammer - Multitouch lib</a></li>
                     </ul>
                 </p>
                 <br />
+                <a href="JavaScript:location.reload(true)" class="btn btn-primary btn-large">update</a>
             </div>
 
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/lib/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="js/lib/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
+
+        <script>
+        // Detect appcache manifest update
+        // Check if a new cache is available on page load.
+        (function () {
+            var appCache = window.applicationCache;
+            if (appCache) {
+                appCache.onupdateready = function () {
+                    if (confirm("The app has been updated. Do you want to download the latest files? \nOtherwise they will be updated at the next reload.")) {
+                        location.reload(true);
+                    }
+                };
+
+                var displayStatus = document.querySelector("#online-status");
+                if (displayStatus) {
+                    // Using this, since navigator.onLine is very inconcistent and unreliable
+                    appCache.onerror = function() {
+                        displayStatus.className = "offline";
+                        displayStatus.title = "Offline";
+                    };
+                    
+                }
+            }
+        })();
+        </script>
 
     </body>
 </html>
