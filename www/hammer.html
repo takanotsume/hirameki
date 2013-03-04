@@ -76,7 +76,7 @@
         }
 
         #carousel li.pane1 { background: #42d692; }
-        #carousel li.pane2 { background: #4986e7; }
+        #carousel li.pane2 { background: #42d692; }
         #carousel li.pane3 { background: #d06b64; }
         #carousel li.pane4 { background: #cd74e6; }
         #carousel li.pane5 { background: #9fe1e7; }
@@ -268,14 +268,23 @@
             }
         }
 
+        $(document).keydown(function(e){
+            switch(e.keyCode) {
+                case 37:
+                    self.next();
+                    break;
+                case 39:
+                self.prev();
+                break;
+            }
+        });
+
         element.hammer({ drag_lock_to_axis: true })
             .on("release dragleft dragright swipeleft swiperight", handleHammer);
     }
 
-
     var carousel = new Carousel("#carousel");
     carousel.init();
-
 
     </script>
 
