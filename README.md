@@ -12,6 +12,7 @@ Demo a full server/client app with:
 - gh-pages
 - Boilerplate HTML5, Bootstrap, Font Awesome
 - Zombie.js, Assert.js, Handlebar/EJS, moment.js
+- hammer.js, Sidetap, slide-out menu ...
 
 ## 1) Installing Github Repository and gh-pages post-commit
 ``` shell
@@ -65,7 +66,8 @@ Documentation
   - Have a look to https://github.com/iloire/WatchMen
   - http://bartaz.github.com/impress.js/#/overview
   - X-Tag https://github.com/mozilla/x-tag as in https://github.com/mozilla/mortar-tab-view/tree/master/www/js/lib
-
+  - http://danielfiller.com/demo/pure-css-slideout-menu/
+  
 HTML 5
 ---
   - http://www.html5rocks.com/en/tutorials/appcache/beginner/
