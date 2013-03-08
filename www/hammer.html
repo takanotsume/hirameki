@@ -4,6 +4,7 @@
     <title>Hammer.js</title>
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <style>
 
         html, body, #carousel, #carousel ul, #carousel li {
@@ -83,35 +84,25 @@
 
     </style>
 </head>
-
 <body>
 
-    <!--<div id="debug">Log</div>-->
+<div id="carousel">
+    <ul>
+        <li class="pane1"><h2>Swipe...</h2></li>
+        <li class="pane2"><h2>...or drag...</h2></li>
+        <li class="pane3"><h2>...or swipe...</h2></li>
+        <li class="pane4"><h2>..or drag...</h2></li>
+        <li class="pane5"><h2>Dit is het einde!</h2></li>
+    </ul>
+</div>
 
-    <div id="carousel">
-        <ul>
-            <li class="pane1"><h2>Swipe...</h2></li>
-            <li class="pane2"><h2>...or drag...</h2></li>
-            <li class="pane3"><h2>...or swipe...</h2></li>
-            <li class="pane4"><h2>..or drag...</h2></li>
-            <li class="pane5"><h2>Dit is het einde!</h2></li>
-        </ul>
-    </div>
+<!-- jQuery is just for the demo! Hammer.js works without jQuery :-) -->
+<script src="js/lib/jquery-1.9.1.min.js"></script>
+<script src="js/lib/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script src="js/lib/hammer.min.js"></script>
 
-
-    <!-- jQuery is just for the demo! Hammer.js works without jQuery :-) -->
-    <script src="js/lib/jquery-1.9.1.min.js"></script>
-    <script src="js/lib/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    <script src="js/lib/hammer.jquery.min.js"></script>
-
-    <script>
-
-    var debug_el = $("#debug");
-    function debug(text) {
-        debug_el.text(text);
-    }
-
-
+<script>
+    
     /**
      * requestAnimationFrame and cancel polyfill
      */
@@ -140,13 +131,12 @@
             };
     }());
 
-
     /**
     * super simple carousel
     * animation between panes happens with css transitions
     */
-    function Carousel(element)
-    {
+    function Carousel(element) {
+
         var self = this;
         element = $(element);
 
@@ -157,7 +147,6 @@
         var pane_count = panes.length;
 
         var current_pane = 0;
-
 
         /**
          * initial
@@ -170,7 +159,6 @@
                 //updateOffset();
             })
         };
-
 
         /**
          * set the pane dimensions and scale the container
@@ -219,8 +207,6 @@
 
         this.next = function() { return this.showPane(current_pane+1, true); };
         this.prev = function() { return this.showPane(current_pane-1, true); };
-
-
 
         function handleHammer(ev) {
             // disable browser scrolling
@@ -279,14 +265,16 @@
             }
         });
 
-        element.hammer({ drag_lock_to_axis: true })
-            .on("release dragleft dragright swipeleft swiperight", handleHammer);
+        var hammertime = Hammer(element.get(0), {
+            prevent_default: true
+        }).on("release dragleft dragright swipeleft swiperight", handleHammer);
+
     }
 
     var carousel = new Carousel("#carousel");
     carousel.init();
 
-    </script>
+</script>
 
 </body>
 </html>
