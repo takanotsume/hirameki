@@ -11,7 +11,7 @@ Demo a full server/client app with:
 - Node Jitsu
 - gh-pages
 - Boilerplate HTML5, Bootstrap, Font Awesome
-- Zombie.js, Assert.js, Handlebar/EJS, moment.js
+- Phantomjs, Zombie.js, Assert.js, Handlebar/EJS, moment.js
 - hammer.js, Sidetap, slide-out menu ...
 
 ## 1) Installing Github Repository and gh-pages post-commit
