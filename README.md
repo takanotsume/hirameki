@@ -13,6 +13,7 @@ Demo a full server/client app with:
 - Boilerplate HTML5, Bootstrap, Font Awesome
 - Phantomjs, Zombie.js, Assert.js, Handlebar/EJS, moment.js
 - hammer.js, Sidetap, slide-out menu ...
+- JQuery Mobile, Ratchet ...
 
 ## 1) Installing Github Repository and gh-pages post-commit
 ``` shell
