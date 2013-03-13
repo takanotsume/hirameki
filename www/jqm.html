@@ -59,7 +59,7 @@
 	<div data-role="footer" data-position="fixed">
 	    <div data-role="navbar" data-iconpos="bottom">
 	        <ul>
-	            <li><a href="#" data-icon="grid">Summary</a></li>
+	            <li><a href="#" data-icon="grid" id="summary">Summary</a></li>
 	            <li><a href="#" data-icon="star" class="ui-btn-active">Favs</a></li>
 	            <li><a href="#" data-icon="gear">Setup</a></li>
 	        </ul>
@@ -90,6 +90,11 @@
 <script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
 <script>
 	$(document).ready(function(){
+		
+		$('#summary').click(function() {
+		    $.mobile.changePage($('#bar'), 'slide');
+		});
+		
 		/*
 		$(document).on("swiperight", function(event, ui) {
 			$("#leftpanel1").panel("open", {display: 'overlay', position: 'right'} );
