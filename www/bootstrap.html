@@ -71,7 +71,10 @@
             </div>
         </div>
 
+        <div id="target"></div>
+
         <div class="container">
+
 
             <div class="notice"></div>
 
@@ -107,6 +110,8 @@
                 <p>&copy; Company 2012</p>
             </footer>
 
+            <div id="target"></div>
+
         </div> <!-- /container -->
 
         <!-- /template -->
@@ -124,7 +129,7 @@
         <script src="js/main.js"></script>
         <script>
 
-            $("a.btn-primary").click(function() {
+            $("body").delegate("a.btn-primary", "click", function() {
                 var template = Handlebars.compile($("#entry-template").html());
                 var data = {title: "My New Notice", body: "This is my first Notice!"}
                 var html = template(data);
@@ -133,6 +138,29 @@
                     // Animation complete.
                 });
             });
+
+            function get() {
+                this.template = function(path, data, element, target) {
+                    $.ajax({
+                        url: path, //ex. js/templates/mytemplate.handlebars
+                        cache: true,
+                        success: function(result) {
+                            source    = $(result).filter(element).html();
+                            template  = Handlebars.compile(source);
+                            html      = template(data);
+                            $(target).html(html);
+                        }               
+                    });
+                };
+            }
+
+            var get = new get();
+            get.template(
+                'tpl.handlebars',
+                {title: "My New Post", body: "This is my first post!"},
+                '#entry-template1',
+                '#target'
+            );
 
             /*
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
