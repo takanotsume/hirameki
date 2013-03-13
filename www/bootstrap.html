@@ -129,16 +129,6 @@
         <script src="js/main.js"></script>
         <script>
 
-            $("body").delegate("a.btn-primary", "click", function() {
-                var template = Handlebars.compile($("#entry-template").html());
-                var data = {title: "My New Notice", body: "This is my first Notice!"}
-                var html = template(data);
-                $('div.notice').append(html);
-                $('div.alert').fadeOut(2500, function() {
-                    // Animation complete.
-                });
-            });
-
             function get() {
                 this.template = function(path, data, element, target) {
                     $.ajax({
@@ -154,21 +144,25 @@
                 };
             }
 
-            var get = new get();
-            get.template(
-                'tpl.handlebars',
-                {title: "My New Post", body: "This is my first post!"},
-                '#entry-template1',
-                '#target'
-            );
+            $("body").delegate("a.btn-primary", "click", function() {
+                var template = Handlebars.compile($("#entry-template").html());
+                var data = {title: "My New Notice", body: "This is my first Notice!"}
+                var html = template(data);
+                $('div.notice').append(html);
+                $('div.alert').fadeOut(2500, function() {
+                    // Animation complete.
+                });
 
-            /*
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-            */
-            $('.alert').show();
+                new get().template(
+                    'tpl.handlebars',
+                    {title: "My New Post", body: "This is my first post!"},
+                    '#entry-template1',
+                    '#target'
+                );
+
+            });
+
+            // ('.alert').show();
         </script>
 
     </body>
