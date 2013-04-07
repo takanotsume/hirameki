@@ -1,0 +1,26 @@
+@font-face {
+	font-family: 'JoystixRegular';
+	src: url('../font/joystix-webfont.eot');
+	src: local('?'), url('../font/joystix-webfont.woff') format('woff'), url('../font/joystix-webfont.ttf') format('truetype'), url('../font/joystix-webfont.svg#webfontX0J6zkfg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.Joystix-Regular {
+	font-weight: normal;
+	font-style: normal;
+	line-height: normal;
+	font-family: 'JoystixRegular',sans-serif;
+}
+
+.spacemarine {
+  width: 60px;
+  height: 95px;
+  background-image: url("../img/spacemarine.gif");
+  animation: play 2.8s steps(6) infinite;
+}
+
+@keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -348px; }
+}
