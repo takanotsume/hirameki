@@ -15,8 +15,8 @@ app.use(express.logger())
   }));
 
 // Index page routing ...
-app.get('/', function (req, res) {
-  res.sendfile(__dirname + 'www/index.html');
+app.get('/%E9%96%83%E3%81%8D', function (req, res) {
+  res.sendfile(__dirname + '/www/index.html');
 });
 
 server.listen(3000, function() {
